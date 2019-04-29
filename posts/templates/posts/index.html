@@ -32,17 +32,17 @@
     <h1 class="text-center">Welcome to Shun's blog!!</h1>
     <br></br>
     {%load static %}
-    <img src="{%static 'posts/home.jpg' %}" class="img-fluid rounded" style="max-height: 200px;"/>
+    <img src="{%static 'posts/home.jpg' %}" class="img-fluid rounded mx-auto d-block" style="max-height: 200px;"/>
 
     <hr>
-    
+
     <h3>最新の投稿</h3>
     {%for post in posts.all%}
      <a href="{% url 'post_detail' post.id %}">{{post.title}}</a>
      <br></br>
      {{post.published}}
      <br></br>
-     <img src="{{post.image.url}}" class="img-fluid rounded" style="max-height: 200px;"/>
+     <img src="{{post.image.url}}" class="img-fluid rounded " style="max-height: 200px;"/>
      <br></br>
      {{post.summary}}
      <br></br>
